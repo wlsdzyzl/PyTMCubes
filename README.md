@@ -11,7 +11,8 @@ The main difference between PyTMCubes (this repo) and original version is that w
 The usage are almost the same except for an additional `truncated_value` (by default the volume will not be truncated).
 
 ```python
-
+## see /examples/half_spheres.py
+mcubes.marching_cubes(u, isovalue = 0.0, truncated_value = 5)
 ```
 
 The following figures give an intuitive illustration:
