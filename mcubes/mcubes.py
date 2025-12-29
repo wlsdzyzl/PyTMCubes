@@ -52,9 +52,9 @@ def voxel_decimate(vertices: np.ndarray,
 
 def marching_cubes(volume, isovalue = 0.0, truncated_value = 0.0):
     vertices, triangles = _marching_cubes(volume, isovalue, truncated_value)
-    vertices, triangles = voxel_decimate(vertices, triangles, 0.5)
+    vertices, triangles = voxel_decimate(vertices, triangles, 0.01)
     return vertices, triangles
 def marching_cubes_func(lower, upper, numx, numy, numz, f, isovalue, truncated_value = 0.0):
     vertices, triangles = _marching_cubes_func(lower, upper, numx, numy, numz, f, isovalue, truncated_value, 1.0)
-    vertices, triangles = voxel_decimate(vertices, triangles, 0.5)
+    vertices, triangles = voxel_decimate(vertices, triangles, 0.01)
     return vertices, triangles
